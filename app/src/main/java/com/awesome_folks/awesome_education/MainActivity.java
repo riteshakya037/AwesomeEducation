@@ -15,6 +15,7 @@ import com.awesome_folks.awesome_education.DashBoard.DashFragment;
 import com.awesome_folks.awesome_education.Notes.NotesFragment;
 import com.awesome_folks.awesome_education.Notices.NoticeFragment;
 import com.awesome_folks.awesome_education.Routine.RoutineFragment;
+import com.getbase.floatingactionbutton.FloatingActionsMenu;
 
 
 public class MainActivity extends ActionBarActivity {
@@ -33,11 +34,23 @@ public class MainActivity extends ActionBarActivity {
 
     public static final String CURRENT_POSITION = "CURRENT_POSITION";
 
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
         // TODO Auto-generated method stub
-        super.onSaveInstanceState(outState);
-        outState.putInt(CURRENT_POSITION, mCurrentPosition);
+        if (savedInstanceState != null) {
+            super.onSaveInstanceState(savedInstanceState);
+            System.out.println(mCurrentPosition);
+            savedInstanceState.putInt(CURRENT_POSITION, mCurrentPosition);
+        }
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        if (savedInstanceState != null) {
+            setFragment(savedInstanceState.getInt(CURRENT_POSITION));
+
+        }
     }
 
     @Override
@@ -107,6 +120,12 @@ public class MainActivity extends ActionBarActivity {
             startActivity(chooser);
         }
 
+    }
+
+    public void hideFab(View view) {
+        System.out.println("asd Clicked");
+        FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
+        fab.collapse();
     }
 
     public void navDrawerListener(View view) {

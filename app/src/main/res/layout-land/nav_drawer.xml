@@ -15,7 +15,7 @@
             android:id="@+id/backGroundBadge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/half_black"
+            android:background="@drawable/the_dark_knight"
             android:contentDescription="@null" />
 
         <TextView
@@ -241,7 +241,7 @@
                     android:id="@+id/feedback"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/nav_item_height"
-                    android:onClick="navDrawerListener">
+                    android:onClick="navFootListener">
 
                     <ImageView
                         android:id="@+id/icoFeedback"
@@ -273,7 +273,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/nav_item_height"
                     android:layout_alignParentLeft="true"
-                    android:onClick="navDrawerListener">
+                    android:onClick="navFootListener">
 
                     <ImageView
                         android:id="@+id/icoSettings"

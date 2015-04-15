@@ -22,21 +22,23 @@ public class DashFragment extends Fragment {
      * This is a method for Fragment.
      * You can do the same in onCreate or onRestoreInstanceState
      */
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-
-        if (savedInstanceState != null) {
-            Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable(BUNDLE_RECYCLER_LAYOUT);
-            recyclerView.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
-        }
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putParcelable(BUNDLE_RECYCLER_LAYOUT, recyclerView.getLayoutManager().onSaveInstanceState());
-    }
+//    @Override
+//    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+//        super.onViewStateRestored(savedInstanceState);
+//
+//        if (savedInstanceState != null) {
+//            Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable(BUNDLE_RECYCLER_LAYOUT);
+//            recyclerView.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
+//        }
+//    }
+//
+//    @Override
+//    public void onSaveInstanceState(Bundle outState) {
+//        if (outState != null) {
+//            super.onSaveInstanceState(outState);
+//            outState.putParcelable(BUNDLE_RECYCLER_LAYOUT, recyclerView.getLayoutManager().onSaveInstanceState());
+//        }
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

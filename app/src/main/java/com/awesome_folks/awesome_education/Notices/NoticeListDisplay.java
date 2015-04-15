@@ -70,6 +70,7 @@ public class NoticeListDisplay extends RecyclerView.Adapter<NoticeListDisplay.No
     }
 
     public void refresh(final Context c, SwipeRefreshLayout swipeRefreshLayout) {
+        cardList = new ArrayList<>();
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Notice");
         query.orderByDescending("createdAt");
         query.whereEqualTo("Subscription", "Kathmandu Engineering College_Computer_1");

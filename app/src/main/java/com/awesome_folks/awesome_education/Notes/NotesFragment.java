@@ -28,21 +28,19 @@ public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefr
      * This is a method for Fragment.
      * You can do the same in onCreate or onRestoreInstanceState
      */
-    @Override
-    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
-        super.onViewStateRestored(savedInstanceState);
-
-        if (savedInstanceState != null) {
-            Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable(BUNDLE_RECYCLER_LAYOUT);
-            recyclerView.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
-        }
-    }
-
-    @Override
-    public void onSaveInstanceState(Bundle outState) {
-        super.onSaveInstanceState(outState);
-        outState.putParcelable(BUNDLE_RECYCLER_LAYOUT, recyclerView.getLayoutManager().onSaveInstanceState());
-    }
+//    @Override
+//    public void onViewStateRestored(@Nullable Bundle savedInstanceState) {
+//        super.onViewStateRestored(savedInstanceState);
+//        if (savedInstanceState != null) {
+//            Parcelable savedRecyclerLayoutState = savedInstanceState.getParcelable(BUNDLE_RECYCLER_LAYOUT);
+//            recyclerView.getLayoutManager().onRestoreInstanceState(savedRecyclerLayoutState);
+//        }
+//    }
+//    @Override
+//    public void onSaveInstanceState(Bundle outState) {
+//        super.onSaveInstanceState(outState);
+//         outState.putParcelable(BUNDLE_RECYCLER_LAYOUT, recyclerView.getLayoutManager().onSaveInstanceState());
+//    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -64,15 +62,25 @@ public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefr
         recyclerView.setAdapter(adaptor);
         recyclerView.setOnScrollListener(new RecyclerView.OnScrollListener() {
             @Override
-            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-                int pos = linearLayoutManager.findLastCompletelyVisibleItemPosition();
-                super.onScrollStateChanged(recyclerView, newState);
-                if (pos == adaptor.cardList.size() - 1)
-                    ((MainActivity) getActivity()).HideFAB(true);
-                else
-                    ((MainActivity) getActivity()).HideFAB(false);
-
+            public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
+                boolean isSignificantDelta = Math.abs(dy) > getResources().getDimensionPixelOffset(R.dimen.fab_scroll_threshold);
+                if (isSignificantDelta) {
+                    if (dy > 0) {
+                        ((MainActivity) getActivity()).HideFAB(true);
+                    } else {
+                        ((MainActivity) getActivity()).HideFAB(false);
+                    }
+                }
             }
+
+//            @Override
+//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+//                int pos = linearLayoutManager.findLastCompletelyVisibleItemPosition();
+//                super.onScrollStateChanged(recyclerView, newState);
+//                if (pos == adaptor.cardList.size() - 1 || adaptor.cardList.size() != 0)
+//                    ((MainActivity) getActivity()).HideFAB(true);
+//
+//            }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return layout;
@@ -86,7 +94,8 @@ public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefr
 
     @Override
     public void onRefresh() {
-        adaptor.refresh(getActivity(),swipeRefreshLayout);
+        adaptor.refresh(getActivity(), swipeRefreshLayout);
+        recyclerView.setAdapter(adaptor);
     }
 
 

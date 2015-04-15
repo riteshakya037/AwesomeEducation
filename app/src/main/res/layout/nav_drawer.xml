@@ -15,7 +15,7 @@
             android:id="@+id/backGroundBadge"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/half_black"
+            android:background="@drawable/the_dark_knight"
             android:contentDescription="@null" />
 
         <TextView

@@ -40,7 +40,7 @@ public class NotesListDisplay extends RecyclerView.Adapter<NotesListDisplay.Note
     private final LayoutInflater inflator;
     List<singleCard> cardList = Collections.EMPTY_LIST;
     Context context;
-    private int lastPosition = -1;
+
 
     NotesListDisplay(final Context c) {
         this.context = c;
@@ -79,6 +79,7 @@ public class NotesListDisplay extends RecyclerView.Adapter<NotesListDisplay.Note
 
     public void refresh(final Context c, SwipeRefreshLayout swipeRefreshLayout) {
         this.context = c;
+        cardList = new ArrayList<>();
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Notes");
         query.orderByDescending("createdAt");
         query.whereEqualTo("Subscription", "Kathmandu Engineering College_Computer_1");
