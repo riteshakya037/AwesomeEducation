@@ -1,8 +1,19 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="AppTheme.Base">
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/accentColor</item>
+        <item name="colorControlHighlight">@color/primaryColor</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowActionModeOverlay">true</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
     </style>
 
     <style name="menu_labels_style">
@@ -10,5 +21,30 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="NavDrawerListIcon">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginLeft">16dp</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:contentDescription">@null</item>
+        <item name="android:tint">@color/materialGray</item>
+    </style>
 
+    <style name="NavDrawerText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_alignParentTop">true</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:layout_marginLeft">72dp</item>
+        <item name="android:textSize">@dimen/nav_textSize</item>
+        <item name="android:textColor">@color/materialGray</item>
+        <item name="android:alpha">170</item>
+
+    </style>
+
+    <dimen name="nav_textSize">14dp</dimen>
 </resources>

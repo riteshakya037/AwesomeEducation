@@ -1,0 +1,295 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/navList"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white">
+
+
+    <FrameLayout
+        android:id="@+id/picLayout"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:id="@+id/backGroundBadge"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/half_black"
+            android:contentDescription="@null" />
+
+        <TextView
+            android:id="@+id/lblEmailID"
+            android:layout_width="wrap_content"
+            android:layout_height="34dp"
+            android:layout_gravity="left|bottom"
+            android:fontFamily="Roboto-Medium"
+            android:paddingLeft="16dp"
+            android:text="riteshakya037@gmail.com"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/lblName"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_gravity="left|bottom"
+            android:fontFamily="Roboto Medium"
+            android:paddingLeft="16dp"
+            android:text="Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp" />
+
+    </FrameLayout>
+
+    <!--<android.support.v7.widget.RecyclerView-->
+
+    <!--android:id="@+id/drawerList"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_alignParentLeft="true"-->
+    <!--android:layout_alignParentStart="true"-->
+    <!--android:layout_below="@id/picLayout" />-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/picLayout"
+        android:background="#fff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/dashRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/tabDash"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoDash"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_dashboard" />
+
+                    <TextView
+                        android:id="@+id/lblDash"
+                        style="@style/NavDrawerText"
+                        android:text="@string/lblDashBoard"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/notesRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/dashRipple"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/tabNotes"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoNotes"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_notes" />
+
+                    <TextView
+                        android:id="@+id/lblNotes"
+                        style="@style/NavDrawerText"
+                        android:text="@string/lblNotes"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/noticeRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notesRipple"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/tabNotices"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoNotices"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_notice" />
+
+                    <TextView
+                        android:id="@+id/lblNotices"
+                        style="@style/NavDrawerText"
+                        android:text="@string/lblNotices"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/discussionRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/noticeRipple"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/tabDiscussion"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoDiscussion"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_discussion" />
+
+                    <TextView
+                        android:id="@+id/lblDiscussion"
+                        style="@style/NavDrawerText"
+                        android:text="@string/lblDiscussion"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/routineRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/discussionRipple"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/tabRoutine"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoRoutine"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_routine" />
+
+                    <TextView
+                        android:id="@+id/lblRoutine"
+                        style="@style/NavDrawerText"
+                        android:text="@string/lblRoutine"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <View
+                android:id="@+id/separator2"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/routineRipple"
+                android:layout_marginBottom="8dp"
+                android:layout_marginTop="8dp"
+                android:background="#c8cccc"
+                android:visibility="visible" />
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/feedbackRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/settingRipple"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/feedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_item_height"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoFeedback"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_feedback" />
+
+                    <TextView
+                        android:id="@+id/lblFeedback"
+                        style="@style/NavDrawerText"
+                        android:text="@string/lblFeedBack"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+            <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/settingRipple"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/separator2"
+                app:mrl_rippleColor="@color/primaryColor"
+                app:mrl_rippleDuration="350"
+                app:mrl_rippleFadeDuration="75"
+                app:mrl_rippleHover="true"
+                app:mrl_rippleOverlay="true">
+
+                <RelativeLayout
+                    android:id="@+id/settings"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/nav_item_height"
+                    android:layout_alignParentLeft="true"
+                    android:onClick="navDrawerListener">
+
+                    <ImageView
+                        android:id="@+id/icoSettings"
+                        style="@style/NavDrawerListIcon"
+                        android:src="@drawable/ic_settings" />
+
+                    <TextView
+                        android:id="@+id/lblSettings"
+                        style="@style/NavDrawerText"
+                        android:text="@string/action_settings"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+                </RelativeLayout>
+            </com.balysv.materialripple.MaterialRippleLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

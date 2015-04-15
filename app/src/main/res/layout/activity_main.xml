@@ -1,7 +1,45 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/background"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<include layout="@layout/floating_action_button"/>
 
-</RelativeLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.awesome_folks.awesome_education.MainActivity">
+
+        <include
+            android:id="@+id/appBar"
+            layout="@layout/app_bar" />
+
+        <FrameLayout
+            android:id="@+id/fragContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/appBar" />
+
+        <View
+            android:id="@+id/elevationShadow"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_below="@id/appBar"
+            android:background="@drawable/toolbar_shadow" />
+
+        <include
+            android:id="@+id/fab"
+            layout="@layout/floating_action_button" />
+    </RelativeLayout>
+
+    <fragment
+        android:id="@+id/fragment_navigation_drawer"
+        android:name="com.awesome_folks.awesome_education.NavigationDrawerFragment"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:layout="@layout/nav_drawer"
+        tools:layout="@layout/nav_drawer" />
+
+</android.support.v4.widget.DrawerLayout>

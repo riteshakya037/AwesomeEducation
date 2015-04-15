@@ -6,8 +6,17 @@
     <color name="white">#fafafa</color>
     <color name="white_pressed">#f1f1f1</color>
     <color name="accentColor">#f50057</color>
-    <color name="pink_pressed">#ec407a</color>
+    <color name="accent_pressed">#ec407a</color>
     <color name="blue_semi_transparent">#805677fc</color>
     <color name="blue_semi_transparent_pressed">#80738ffe</color>
-    <color name="primaryColor">#2AADF2</color>
+    <color name="primaryColor">#2196F3</color>
+    <color name="primaryDark">#1976D2</color>
+    <color name="primaryDarkAlpha">#801976D2</color>
+    <color name="materialGray">@color/material_blue_grey_900</color>
+
+    <color name="colorRoutine">#F34C43</color>
+    <color name="colorNotices">#2AADF2</color>
+    <color name="colorDiscussions">#FB9765</color>
+    <color name="colorNotes">#B7C588</color>
+    <color name="colorDashBoard">#5677fc</color>
 </resources>

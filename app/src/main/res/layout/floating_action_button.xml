@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.getbase.floatingactionbutton.FloatingActionsMenu
-    android:id="@+id/multiple_actions"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.getbase.floatingactionbutton.FloatingActionsMenu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:fab="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/multiple_actions"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_alignParentBottom="true"
-    android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true"
-    fab:fab_addButtonColorNormal="@color/accentColor"
-    fab:fab_addButtonColorPressed="@color/accentColor"
-    fab:fab_addButtonPlusIconColor="@color/white"
-    fab:fab_labelStyle="@style/menu_labels_style"
+    android:layout_alignParentRight="true"
     android:layout_marginBottom="16dp"
+    android:layout_marginEnd="16dp"
     android:layout_marginRight="16dp"
-    android:layout_marginEnd="16dp">
+    fab:fab_addButtonColorNormal="@color/accentColor"
+    fab:fab_addButtonColorPressed="@color/accent_pressed"
+    fab:fab_addButtonPlusIconColor="@color/white"
+    fab:fab_labelStyle="@style/menu_labels_style">
 
     <com.getbase.floatingactionbutton.FloatingActionButton
         android:id="@+id/addNotice"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         fab:fab_colorNormal="@color/white"
+        fab:fab_colorPressed="@color/white_pressed"
         fab:fab_icon="@drawable/ic_notice"
         fab:fab_title="Add Notices" />
 
@@ -29,6 +29,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         fab:fab_colorNormal="@color/white"
+        fab:fab_colorPressed="@color/white_pressed"
+
         fab:fab_icon="@drawable/ic_notes"
         fab:fab_title="Add Note" />
 
@@ -36,10 +38,11 @@
         android:id="@+id/addDiscussion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        fab:fab_colorNormal="@color/white"
-        fab:fab_icon="@drawable/ic_discussion"
-        fab:focusable="false"
         fab:fab_colorDisabled="@color/half_black"
+        fab:fab_colorNormal="@color/white"
+
+        fab:fab_colorPressed="@color/white_pressed"
+        fab:fab_icon="@drawable/ic_discussion"
         fab:fab_title="Add Discussion" />
     <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
     <!--android:id="@+id/pink_icon"-->
@@ -125,7 +128,6 @@
     <!--fab:fab_colorPressed="@color/white_pressed"/>-->
 
     <!--</com.getbase.floatingactionbutton.FloatingActionsMenu>-->
-
 
 
     <!--<com.getbase.floatingactionbutton.FloatingActionsMenu-->

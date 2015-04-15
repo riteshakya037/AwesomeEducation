@@ -1,7 +1,107 @@
 <resources>
-    <string name="app_name">AwesomeEducation</string>
+    <string name="app_name">Awesome Education</string>
     <string name="title_activity_main">MainActivity</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_setting">Settings</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="drawerOpen">Open</string>
+    <string name="drawerClose">Close</string>
+
+
+    <string-array name="dashTitle">
+        <item>Routine</item>
+        <item>Assignment/Notices</item>
+        <item>Notification</item>
+        <item>New Uploads</item>
+    </string-array>
+
+    <string-array name="listCollege">
+        <item>Kathmandu Engineering College</item>
+    </string-array>
+    <string-array name="listFaculty">
+        <item>Computer</item>
+        <item>Electronics</item>
+        <item>Civil</item>
+        <item>Electrical</item>
+        <item>Architecture</item>
+    </string-array>
+    <string-array name="listYear">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="dashAdditional">
+        <item>7:00 - 8:00 Science\n8:00 - 9:00 Maths\n9:00 - 10:00 Commerce\n10:00 - 11:00 Humanity\n11:00 - 12:00 Lunch\n12:00 - 1:00 Arts\n</item>
+        <item>New - 12 days remaining\nNew - 15 days Remaining</item>
+        <item></item>
+        <item>New - Author\nNew - Author</item>
+    </string-array>
+    <array name="dashColor">
+        <item>@color/colorRoutine</item>
+        <item>@color/colorNotices</item>
+        <item>@color/colorDiscussions</item>
+        <item>@color/colorNotes</item>
+    </array>
+    <array name="actionColor">
+        <item>@color/colorDashBoard</item>
+        <item>@color/colorNotes</item>
+        <item>@color/colorNotices</item>
+        <item>@color/colorDiscussions</item>
+        <item>@color/colorRoutine</item>
+    </array>
+
+
+    <string name="cardPostedLabel">"Posted by: "</string>
+    <string name="noticeDate">"Date: "</string>
+    <string name="cardDownload">Download</string>
+    <string name="cardShare">Share</string>
+    <string name="lblDashBoard">DashBoard</string>
+    <string name="lblNotes">Notes</string>
+    <string name="lblNotices">Notices</string>
+    <string name="lblDiscussion">Discussion</string>
+    <string name="lblRoutine">Routine</string>
+    <string name="lblSettings">Settings</string>
+    <string name="lblFeedBack">Send Us FeedBack</string>
+    <string name="hoverNew">New</string>
+    <string name="hoverDiscussion">Discussion</string>
+    <string name="saveSDCard">Save to SD-Card</string>
+    <string name="saveDrive">Save to Drive</string>
+
+    <string name="content_hint">Content</string>
+    <string name="drawer_hint">Drawer</string>
+    <string name="btnSign">Sign Up</string>
+    <string name="btnLogin">Login</string>
+    <string name="lblPasswordAgain">Enter Password Again</string>
+    <string name="lblPassword">Enter Password</string>
+    <string name="lblUserName">Enter User Name</string>
+    <string name="btnSubmit">Submit</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_username">Username</string>
+    <string name="prompt_password">Password</string>
+    <string name="prompt_password_again">Password Again</string>
+    <string name="action_sign_in_register"><b>Sign in</b> or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_forgot_password">Recover lost password</string>
+    <string name="login_progress_signing_in">Signing in&#8230;</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_intro">"Please "</string>
+    <string name="error_blank_username">enter a username</string>
+    <string name="error_blank_password">enter a password</string>
+    <string name="error_mismatched_passwords">enter the same password twice</string>
+    <string name="error_join">", and "</string>
+    <string name="error_end">.</string>
+    <string name="lblEmail">Enter Email</string>
+    <string name="lblStart">A Email has been send to </string>
+    <string name="btnResend">Resend</string>
+    <string name="lblLogOut">Log Out</string>
+    <string name="lblCommingSoon">Comming Soon</string>
 </resources>
