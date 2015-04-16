@@ -4,12 +4,14 @@ import android.app.FragmentTransaction;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
 import com.awesome_folks.awesome_education.DashBoard.DashFragment;
 import com.awesome_folks.awesome_education.Notes.NotesFragment;
@@ -45,12 +47,9 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
-    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+    protected void onRestoreInstanceState(@Nullable Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
-        if (savedInstanceState != null) {
-            setFragment(savedInstanceState.getInt(CURRENT_POSITION));
-
-        }
+        setFragment(savedInstanceState.getInt(CURRENT_POSITION));
     }
 
     @Override
@@ -97,7 +96,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_search) {
-
+            Toast.makeText(this, "Search", Toast.LENGTH_SHORT);
         }
         return super.onOptionsItemSelected(item);
     }
@@ -120,12 +119,6 @@ public class MainActivity extends ActionBarActivity {
             startActivity(chooser);
         }
 
-    }
-
-    public void hideFab(View view) {
-        System.out.println("asd Clicked");
-        FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
-        fab.collapse();
     }
 
     public void navDrawerListener(View view) {
@@ -182,10 +175,11 @@ public class MainActivity extends ActionBarActivity {
 
 
     public void HideFAB(boolean isBottom) {
-        View fab = findViewById(R.id.fab);
+        FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
         if (isBottom)
             fab.animate().translationY(300);
         else
             fab.animate().translationY(0);
+        fab.collapse();
     }
 }

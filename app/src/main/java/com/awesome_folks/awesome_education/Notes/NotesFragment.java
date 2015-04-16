@@ -2,8 +2,6 @@ package com.awesome_folks.awesome_education.Notes;
 
 import android.os.Bundle;
 import android.os.Handler;
-import android.os.Parcelable;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.widget.LinearLayoutManager;
@@ -41,7 +39,6 @@ public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefr
 //        super.onSaveInstanceState(outState);
 //         outState.putParcelable(BUNDLE_RECYCLER_LAYOUT, recyclerView.getLayoutManager().onSaveInstanceState());
 //    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -73,14 +70,14 @@ public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefr
                 }
             }
 
-//            @Override
-//            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
-//                int pos = linearLayoutManager.findLastCompletelyVisibleItemPosition();
-//                super.onScrollStateChanged(recyclerView, newState);
-//                if (pos == adaptor.cardList.size() - 1 || adaptor.cardList.size() != 0)
-//                    ((MainActivity) getActivity()).HideFAB(true);
-//
-//            }
+            @Override
+            public void onScrollStateChanged(RecyclerView recyclerView, int newState) {
+                int pos = linearLayoutManager.findLastCompletelyVisibleItemPosition();
+                super.onScrollStateChanged(recyclerView, newState);
+                if (pos == adaptor.cardList.size() - 1)
+                    ((MainActivity) getActivity()).HideFAB(true);
+
+            }
         });
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         return layout;

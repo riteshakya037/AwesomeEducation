@@ -9,21 +9,17 @@
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:clickable="true"
         tools:context="com.awesome_folks.awesome_education.MainActivity">
 
         <include
             android:id="@+id/appBar"
-            layout="@layout/app_bar"
-
-            android:onClick="hideFab" />
+            layout="@layout/app_bar" />
 
         <FrameLayout
             android:id="@+id/fragContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/appBar"
-            android:onClick="hideFab" />
+            android:layout_below="@+id/appBar"/>
 
         <View
             android:id="@+id/elevationShadow"

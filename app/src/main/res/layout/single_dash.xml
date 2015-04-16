@@ -8,7 +8,6 @@
     android:layout_marginRight="8dp"
     android:layout_marginTop="8dp"
     android:background="#fff"
-    android:stateListAnimator="@anim/raise"
     card_view:cardCornerRadius="1dp">
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
