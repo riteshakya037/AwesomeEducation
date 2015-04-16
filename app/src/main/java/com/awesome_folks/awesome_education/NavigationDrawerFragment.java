@@ -131,17 +131,31 @@ public class NavigationDrawerFragment extends Fragment {
     }
 
     private class ActionBarDrawerToggleCompat extends ActionBarDrawerToggle {
+        Toolbar toolbar;
 
         public ActionBarDrawerToggleCompat(Activity activity, DrawerLayout drawerLayout, Toolbar toolbar) {
             super(
                     activity,
                     drawerLayout, toolbar, R.string.drawerOpen, R.string.drawerClose);
+            this.toolbar = toolbar;
+        }
+
+        @Override
+        public void onDrawerOpened(View drawerView) {
+            super.onDrawerOpened(drawerView);
+            ((MainActivity) getActivity()).hideFab(drawerView);
+       }
+
+        @Override
+        public void onDrawerClosed(View drawerView) {
+            super.onDrawerClosed(drawerView);
+
         }
 
         @Override
         public void onDrawerSlide(View drawerView, float slideOffset) {
             super.onDrawerSlide(drawerView, slideOffset);
-            ((MainActivity)getActivity()).onDrawerSlide(slideOffset);
+            ((MainActivity) getActivity()).onDrawerSlide(slideOffset);
         }
     }
 

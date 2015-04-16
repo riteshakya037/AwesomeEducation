@@ -35,12 +35,6 @@
         <item>3</item>
         <item>4</item>
     </string-array>
-    <string-array name="dashAdditional">
-        <item>7:00 - 8:00 Science\n8:00 - 9:00 Maths\n9:00 - 10:00 Commerce\n10:00 - 11:00 Humanity\n11:00 - 12:00 Lunch\n12:00 - 1:00 Arts\n</item>
-        <item>New - 12 days remaining\nNew - 15 days Remaining</item>
-        <item></item>
-        <item>New - Author\nNew - Author</item>
-    </string-array>
     <array name="dashColor">
         <item>@color/colorRoutine</item>
         <item>@color/colorNotices</item>
@@ -104,4 +98,5 @@
     <string name="btnResend">Resend</string>
     <string name="lblLogOut">Log Out</string>
     <string name="lblCommingSoon">Comming Soon</string>
+    <string name="Search">Search</string>
 </resources>

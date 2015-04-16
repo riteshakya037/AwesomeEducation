@@ -11,6 +11,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.awesome_folks.awesome_education.DashBoard.DashFragment;
@@ -47,6 +48,7 @@ public class MainActivity extends ActionBarActivity {
     }
 
     @Override
+
     protected void onRestoreInstanceState(@Nullable Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         setFragment(savedInstanceState.getInt(CURRENT_POSITION));
@@ -60,6 +62,7 @@ public class MainActivity extends ActionBarActivity {
         noticeFrag = new NoticeFragment();
         routineFrag = new RoutineFragment();
         setContentView(R.layout.activity_main);
+        FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
 
         //Initializing Toolbar
         toolbar = (Toolbar) findViewById(R.id.appBar);
@@ -96,7 +99,7 @@ public class MainActivity extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == R.id.action_search) {
-            Toast.makeText(this, "Search", Toast.LENGTH_SHORT);
+            Toast.makeText(this, "Search", Toast.LENGTH_SHORT).show();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -181,5 +184,20 @@ public class MainActivity extends ActionBarActivity {
         else
             fab.animate().translationY(0);
         fab.collapse();
+    }
+
+    public void hideFab(View v) {
+        FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
+        fab.collapse();
+    }
+
+    public void onFabExpanded() {
+        ImageView overlay = (ImageView) findViewById(R.id.fabOverlay);
+        overlay.setVisibility(View.VISIBLE);
+    }
+
+    public void onFabCollapsed() {
+        ImageView overlay = (ImageView) findViewById(R.id.fabOverlay);
+        overlay.setVisibility(View.GONE);
     }
 }
