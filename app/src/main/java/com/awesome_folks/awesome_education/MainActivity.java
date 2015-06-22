@@ -166,7 +166,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void toggleTranslateFAB(float slideOffset) {
         View fab = findViewById(R.id.fab);
-        fab.setTranslationX(slideOffset * 300);
+        fab.setTranslationX(slideOffset * 300);  //fab
     }
 
     public void onDrawerSlide(float slideOffset) {
