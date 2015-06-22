@@ -24,18 +24,23 @@ public class WelcomeScreen extends ActionBarActivity {
         imgLogo = (ImageView) findViewById(R.id.imgLogo);
         txtLogo = (LinearLayout) findViewById(R.id.txtLogo);
         txtQuotation = (LinearLayout) findViewById(R.id.txtQuotation);
-        btnLogin =  findViewById(R.id.loginRipple);
-        btnSignup =  findViewById(R.id.signRipple);
-        handler.postDelayed(new Runnable() {
+        btnLogin = findViewById(R.id.loginRipple);
+        btnSignup = findViewById(R.id.signRipple);
+
+        imgLogo.setOnClickListener(new View.OnClickListener() {
+            boolean once = true;
             @Override
-            public void run() {
-                txtLogo.animate().translationY(-200).setDuration(1500).setStartDelay(500);
-                imgLogo.animate().translationY(-180).scaleX((float) 0.8).scaleY((float) 0.8).setDuration(1500).setStartDelay(500);
-                txtQuotation.animate().alpha(255).setDuration(4000).setStartDelay(2100);
-                btnSignup.animate().translationY(0).setDuration(2000);
-                btnLogin.animate().translationY(0).setDuration(1500).setStartDelay(500);
+            public void onClick(View v) {
+                if (once) {
+                    once = false;
+                    txtLogo.animate().translationY(-200).setDuration(1500).setStartDelay(50);
+                    imgLogo.animate().translationY(-180).scaleX((float) 0.8).scaleY((float) 0.8).setDuration(1500).setStartDelay(50);
+                    txtQuotation.animate().alpha(255).setDuration(4000).setStartDelay(2100);
+                    btnSignup.animate().translationY(0).setDuration(2000);
+                    btnLogin.animate().translationY(0).setDuration(1500).setStartDelay(500);
+                }
             }
-        }, 5000);
+        });
     }
 
 
