@@ -83,11 +83,12 @@ public class NotesListDisplay extends RecyclerView.Adapter<NotesListDisplay.Note
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Notes");
         query.orderByDescending("createdAt");
         query.whereEqualTo("Subscription", "Kathmandu Engineering College_Computer_1");
-        query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ONLY);
+        query.setCachePolicy(ParseQuery.CachePolicy.CACHE_THEN_NETWORK);
         query.findInBackground(new FindCallback<ParseObject>() {
                                    @Override
                                    public void done(List<ParseObject> parseObjects, ParseException e) {
                                        if (e == null) {
+                                           cardList.clear();
                                            for (ParseObject post : parseObjects) {
                                                singleCard note = new singleCard(post.getObjectId(), post.getString("Title"), post.getString("Author"), post.getString("Description"), post.getString("Link"));
                                                cardList.add(note);
