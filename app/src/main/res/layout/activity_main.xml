@@ -19,7 +19,18 @@
             android:id="@+id/fragContainer"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/appBar"/>
+            android:layout_below="@+id/appBar" />
+
+        <ImageView
+            android:id="@+id/fabOverlay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/appBar"
+            android:alpha="170"
+            android:background="@drawable/radialblur"
+            android:contentDescription=""
+            android:visibility="gone"
+            android:onClick="hideFab"/>
 
         <View
             android:id="@+id/elevationShadow"

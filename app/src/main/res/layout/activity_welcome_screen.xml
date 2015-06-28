@@ -1,0 +1,127 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="50dp"
+        android:src="@drawable/ic_launcher" />
+
+
+    <LinearLayout
+        android:id="@+id/txtLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="30dp"
+        android:orientation="horizontal"
+        android:paddingTop="110dp">
+
+        <TextView
+            android:id="@+id/txtAwesome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Awesome"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/material_blue_grey_800" />
+
+        <TextView
+            android:id="@+id/txtEducation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Education"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/primaryColor" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/txtQuotation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:layout_marginBottom="30dp"
+        android:alpha="0"
+        android:orientation="horizontal"
+        android:paddingTop="146dp">
+
+        <TextView
+            android:id="@+id/txtA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="A "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/material_blue_grey_800" />
+
+        <TextView
+            android:id="@+id/txtRainbow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="Rainbow "
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/accentColor" />
+
+        <TextView
+            android:id="@+id/txtPossibilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:text="of Possibilities"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@color/material_blue_grey_800" />
+    </LinearLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/signRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="160dp"
+        app:mrl_rippleColor="@android:color/white"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleFadeDuration="75"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        android:translationY="300dp">
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="126dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@color/accent_material_dark"
+            android:text="Sign Up"
+            android:textColor="@color/white" />
+
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+    <com.balysv.materialripple.MaterialRippleLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/loginRipple"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="100dp"
+        app:mrl_rippleColor="@android:color/white"
+        app:mrl_rippleDuration="350"
+        app:mrl_rippleFadeDuration="75"
+        app:mrl_rippleHover="true"
+        app:mrl_rippleOverlay="true"
+        android:translationY="300dp">
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="126dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:background="@color/accent_material_dark"
+            android:text="Login In"
+            android:textColor="@color/white" />
+    </com.balysv.materialripple.MaterialRippleLayout>
+
+</FrameLayout>

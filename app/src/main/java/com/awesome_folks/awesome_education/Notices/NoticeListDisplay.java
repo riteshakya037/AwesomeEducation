@@ -74,7 +74,7 @@ public class NoticeListDisplay extends RecyclerView.Adapter<NoticeListDisplay.No
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Notice");
         query.orderByDescending("createdAt");
         query.whereEqualTo("Subscription", "Kathmandu Engineering College_Computer_1");
-        query.setCachePolicy(ParseQuery.CachePolicy.NETWORK_ONLY);
+        query.setCachePolicy(ParseQuery.CachePolicy.CACHE_THEN_NETWORK);
         query.findInBackground(new FindCallback<ParseObject>() {
                                    @Override
                                    public void done(List<ParseObject> parseObjects, ParseException e) {
