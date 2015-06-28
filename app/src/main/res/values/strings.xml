@@ -35,6 +35,12 @@
         <item>3</item>
         <item>4</item>
     </string-array>
+    <string-array name="dashAdditional">
+        <item>7:00 - 8:00 Science\n8:00 - 9:00 Maths\n9:00 - 10:00 Commerce\n10:00 - 11:00 Humanity\n11:00 - 12:00 Lunch\n12:00 - 1:00 Arts\n</item>
+        <item>New - 12 days remaining\nNew - 15 days Remaining</item>
+        <item></item>
+        <item>New - Author\nNew - Author</item>
+    </string-array>
     <array name="dashColor">
         <item>@color/colorRoutine</item>
         <item>@color/colorNotices</item>
@@ -71,9 +77,16 @@
     <string name="btnSign">Sign Up</string>
     <string name="btnLogin">Login</string>
     <string name="lblPasswordAgain">Enter Password Again</string>
+
+    <string name="personalInfo">Personal Information</string>
+    <string name="firstName">First Name</string>
+    <string name="lastName">Last Name</string>
     <string name="lblPassword">Enter Password</string>
-    <string name="lblUserName">Enter User Name</string>
+    <string name="lblUserName">User Name</string>
+    <string name="lblEmail">Email</string>
     <string name="btnSubmit">Submit</string>
+    <string name="dob">Date of Birth</string>
+    <string name="educationDetail">Educational Detail</string>
 
     <!-- Strings related to login -->
     <string name="prompt_username">Username</string>
@@ -93,7 +106,6 @@
     <string name="error_mismatched_passwords">enter the same password twice</string>
     <string name="error_join">", and "</string>
     <string name="error_end">.</string>
-    <string name="lblEmail">Enter Email</string>
     <string name="lblStart">A Email has been send to </string>
     <string name="btnResend">Resend</string>
     <string name="lblLogOut">Log Out</string>
