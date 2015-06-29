@@ -13,13 +13,14 @@
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/personalInfo"
+        android:textSize="25sp"
         android:id="@+id/lblPersonalInformation"
         android:layout_gravity="center_horizontal" />
 
     <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_margin="50dp"
+        android:layout_margin="30dp"
         android:layout_gravity="center_horizontal"
         android:background="@drawable/profile_picture"/>
 
