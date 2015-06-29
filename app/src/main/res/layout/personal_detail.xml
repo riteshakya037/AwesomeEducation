@@ -16,7 +16,7 @@
         android:id="@+id/lblPersonalInformation"
         android:layout_gravity="center_horizontal" />
 
-    <ui.RoundedImageView
+    <ImageView
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_margin="50dp"
