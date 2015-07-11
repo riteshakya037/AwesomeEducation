@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.animation.AccelerateDecelerateInterpolator;
+import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -34,15 +36,16 @@ public class WelcomeScreen extends ActionBarActivity {
 
         imgLogo.setOnClickListener(new View.OnClickListener() {
             boolean once = true;
+
             @Override
             public void onClick(View v) {
                 if (once) {
                     once = false;
-                    txtLogo.animate().translationY(-200).setDuration(1500).setStartDelay(50);
-                    imgLogo.animate().translationY(-180).scaleX((float) 0.8).scaleY((float) 0.8).setDuration(1500).setStartDelay(50);
-                    txtQuotation.animate().alpha(255).setDuration(4000).setStartDelay(2100);
-                    btnSignup.animate().translationY(0).setDuration(2000);
-                    btnLogin.animate().translationY(0).setDuration(1500).setStartDelay(500);
+                    txtLogo.animate().translationY(-200).setDuration(1500).setStartDelay(50).setInterpolator(new AccelerateDecelerateInterpolator());
+                    imgLogo.animate().translationY(-180).scaleX((float) 0.8).scaleY((float) 0.8).setDuration(1500).setStartDelay(50).setInterpolator(new AccelerateDecelerateInterpolator());
+                    txtQuotation.animate().alpha(255).setDuration(4000).setStartDelay(2100).setInterpolator(new AccelerateDecelerateInterpolator());
+                    btnSignup.animate().translationY(0).setDuration(2000).setInterpolator(new AccelerateDecelerateInterpolator());
+                    btnLogin.animate().translationY(0).setDuration(1500).setStartDelay(500).setInterpolator(new AccelerateDecelerateInterpolator());
                 }
             }
         });

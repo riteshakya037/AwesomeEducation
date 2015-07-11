@@ -11,6 +11,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.animation.AccelerateInterpolator;
+import android.view.animation.DecelerateInterpolator;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -180,9 +182,9 @@ public class MainActivity extends ActionBarActivity {
     public void HideFAB(boolean isBottom) {
         FloatingActionsMenu fab = (FloatingActionsMenu) findViewById(R.id.fab);
         if (isBottom)
-            fab.animate().translationY(300);
+            fab.animate().translationY(300).setInterpolator(new DecelerateInterpolator());
         else
-            fab.animate().translationY(0);
+            fab.animate().translationY(0).setInterpolator(new AccelerateInterpolator());
         fab.collapse();
     }
 
