@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/drawDash"
+            android:checked="false"
+            android:icon="@drawable/ic_dashboard"
+            android:title="@string/lblDashBoard" />
+        <item
+            android:id="@+id/drawNotes"
+            android:checked="false"
+            android:icon="@drawable/ic_notes"
+            android:title="@string/lblNotes" />
+
+        <item
+            android:id="@+id/drawNotices"
+            android:checked="false"
+            android:icon="@drawable/ic_notice"
+            android:title="@string/lblNotices" />
+
+        <item
+            android:id="@+id/drawDiscussion"
+            android:checked="false"
+            android:icon="@drawable/ic_discussion"
+            android:title="@string/lblDiscussion" />
+
+        <item
+            android:id="@+id/drawRoutine"
+            android:checked="false"
+            android:icon="@drawable/ic_routine"
+            android:title="@string/lblRoutine" />
+        <item
+            android:id="@+id/drawSetting"
+            android:checked="false"
+            android:icon="@drawable/ic_settings"
+            android:title="@string/lblSettings" />
+        <item
+            android:id="@+id/drawFeedback"
+            android:checked="false"
+            android:icon="@drawable/ic_feedback"
+            android:title="@string/lblFeedBack" />
+
+    </group>
+</menu>

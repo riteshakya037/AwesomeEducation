@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Awesome Education</string>
+    <string name="app_name">Quidity</string>
     <string name="title_activity_main">MainActivity</string>
 
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_setting">Settings</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="drawerOpen">Open</string>
     <string name="drawerClose">Close</string>
@@ -104,4 +104,12 @@
     <string name="btnResend">Resend</string>
     <string name="lblLogOut">Log Out</string>
     <string name="lblCommingSoon">Comming Soon</string>
+
+    <string name="title_activity_sign_up">SignUpActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="welcome">Welcome to Quidity</string>
+    <string name="sign_in_message">Already have an Account? </string>
+    <string name="signUp">Signup</string>
+    <string name="log_in">Log in.</string>
 </resources>

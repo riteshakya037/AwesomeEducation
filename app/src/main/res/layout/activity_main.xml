@@ -5,41 +5,60 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.design.widget.CoordinatorLayout
+        android:id="@+id/coordinator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context="com.awesome_folks.awesome_education.MainActivity">
+        android:layout_height="match_parent">
 
-        <include
-            android:id="@+id/appBar"
-            layout="@layout/app_bar" />
-
-        <FrameLayout
-            android:id="@+id/fragContainer"
+        <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@+id/appBar"/>
+            tools:context="com.awesome_folks.quidity.MainActivity">
 
-        <View
-            android:id="@+id/elevationShadow"
-            android:layout_width="match_parent"
-            android:layout_height="5dp"
-            android:layout_below="@id/appBar"
-            android:background="@drawable/toolbar_shadow" />
+            <include
+                android:id="@+id/appBar"
+                layout="@layout/app_bar" />
+
+            <FrameLayout
+                android:id="@+id/fragContainer"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/appBar" />
+
+            <View
+                android:id="@+id/elevationShadow"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_below="@id/appBar"
+                android:background="@drawable/toolbar_shadow" />
+
+
+        </RelativeLayout>
 
         <include
             android:id="@+id/fab"
-            layout="@layout/floating_action_button" />
-    </RelativeLayout>
+            layout="@layout/floating_action_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_margin="16dp" />
+        <!--<fragment-->
+        <!--android:id="@+id/fragment_navigation_drawer"-->
+        <!--android:name="com.awesome_folks.quidity.NavigationDrawerFragment"-->
+        <!--android:layout_width="300dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_gravity="start"-->
+        <!--app:layout="@layout/nav_drawer"-->
+        <!--tools:layout="@layout/nav_drawer" />-->
+    </android.support.design.widget.CoordinatorLayout>
 
-    <fragment
-        android:id="@+id/fragment_navigation_drawer"
-        android:name="com.awesome_folks.awesome_education.NavigationDrawerFragment"
-        android:layout_width="300dp"
+    <android.support.design.widget.NavigationView
+        android:id="@+id/navigation_view"
+        android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        app:layout="@layout/nav_drawer"
-        tools:layout="@layout/nav_drawer" />
+        app:headerLayout="@layout/header"
+        app:menu="@menu/drawer" />
 
 </android.support.v4.widget.DrawerLayout>

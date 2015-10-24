@@ -19,4 +19,7 @@
     <color name="colorDiscussions">#FB9765</color>
     <color name="colorNotes">#B7C588</color>
     <color name="colorDashBoard">#5677fc</color>
+    <color name="card_background">#ffffff</color>
+    <color name="rippleColor">@color/ripple_material_light</color>
+    <color name="black_overlay">#66000000</color>
 </resources>
