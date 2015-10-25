@@ -4,9 +4,9 @@
     tools:context="com.awesome_folks.quidity.MainActivity">
     <item
         android:id="@+id/action_search"
-        android:orderInCategory="200"
+        android:icon="@drawable/ic_search_white_24dp"
         android:title="Search"
-        android:icon="@drawable/ic_search"
-        app:showAsAction="ifRoom"
-        ></item>
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="always|collapseActionView">
+    </item>
 </menu>

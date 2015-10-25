@@ -19,7 +19,7 @@
         android:layout_height="wrap_content"
         fab:fab_colorNormal="@color/white"
         fab:fab_colorPressed="@color/white_pressed"
-        fab:fab_icon="@drawable/ic_notice"
+        fab:fab_icon="@drawable/ic_today_white_24dp"
         fab:fab_title="Add Notices" />
 
     <com.getbase.floatingactionbutton.FloatingActionButton
@@ -29,7 +29,7 @@
         fab:fab_colorNormal="@color/white"
         fab:fab_colorPressed="@color/white_pressed"
 
-        fab:fab_icon="@drawable/ic_notes"
+        fab:fab_icon="@drawable/ic_note_add_white_24dp"
         fab:fab_title="Add Note" />
 
     <com.getbase.floatingactionbutton.FloatingActionButton
@@ -40,7 +40,7 @@
         fab:fab_colorNormal="@color/white"
 
         fab:fab_colorPressed="@color/white_pressed"
-        fab:fab_icon="@drawable/ic_discussion"
+        fab:fab_icon="@drawable/ic_group_add_white_24dp"
         fab:fab_title="Add Discussion" />
     <!--<com.getbase.floatingactionbutton.FloatingActionButton-->
     <!--android:id="@+id/pink_icon"-->

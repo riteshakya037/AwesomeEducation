@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/nav_icon"
         style="@style/NavDrawerListIcon"
-        android:src="@drawable/ic_settings" />
+        android:src="@drawable/ic_settings_white_24dp" />
 
     <TextView
         android:id="@+id/nav_text"

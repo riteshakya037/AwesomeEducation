@@ -164,13 +164,13 @@ public class MainActivity extends AppCompatActivity implements BottomSheetCallba
                         mCurrentPosition = 4;
                         elevationShadow.setVisibility(View.GONE);
                         return true;
-                    case R.id.settings:
+                    case R.id.drawSetting:
                         Intent setting = new Intent(MainActivity.this, SettingActivity.class);
                         setting.addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP);
                         setting.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(setting);
                         return true;
-                    case R.id.feedback:
+                    case R.id.drawFeedback:
                         Intent i = new Intent(Intent.ACTION_SEND);
                         i.setData(Uri.parse("mailto:"));
                         String to = "awesomefolks@afks.com";

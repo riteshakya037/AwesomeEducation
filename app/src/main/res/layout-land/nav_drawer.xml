@@ -85,7 +85,7 @@
                     <ImageView
                         android:id="@+id/icoDash"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_dashboard" />
+                        android:src="@drawable/ic_dashboard_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblDash"
@@ -115,7 +115,7 @@
                     <ImageView
                         android:id="@+id/icoNotes"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_notes" />
+                        android:src="@drawable/ic_assignment_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblNotes"
@@ -145,7 +145,7 @@
                     <ImageView
                         android:id="@+id/icoNotices"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_notice" />
+                        android:src="@drawable/ic_today_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblNotices"
@@ -175,7 +175,7 @@
                     <ImageView
                         android:id="@+id/icoDiscussion"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_discussion" />
+                        android:src="@drawable/ic_group_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblDiscussion"
@@ -205,7 +205,7 @@
                     <ImageView
                         android:id="@+id/icoRoutine"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_routine" />
+                        android:src="@drawable/ic_view_list_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblRoutine"
@@ -246,7 +246,7 @@
                     <ImageView
                         android:id="@+id/icoFeedback"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_feedback" />
+                        android:src="@drawable/ic_mail_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblFeedback"
@@ -278,7 +278,7 @@
                     <ImageView
                         android:id="@+id/icoSettings"
                         style="@style/NavDrawerListIcon"
-                        android:src="@drawable/ic_settings" />
+                        android:src="@drawable/ic_settings_white_24dp" />
 
                     <TextView
                         android:id="@+id/lblSettings"

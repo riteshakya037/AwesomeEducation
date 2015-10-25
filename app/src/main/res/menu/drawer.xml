@@ -6,40 +6,40 @@
         <item
             android:id="@+id/drawDash"
             android:checked="false"
-            android:icon="@drawable/ic_dashboard"
+            android:icon="@drawable/ic_dashboard_white_24dp"
             android:title="@string/lblDashBoard" />
         <item
             android:id="@+id/drawNotes"
             android:checked="false"
-            android:icon="@drawable/ic_notes"
+            android:icon="@drawable/ic_assignment_white_24dp"
             android:title="@string/lblNotes" />
 
         <item
             android:id="@+id/drawNotices"
             android:checked="false"
-            android:icon="@drawable/ic_notice"
+            android:icon="@drawable/ic_today_white_24dp"
             android:title="@string/lblNotices" />
 
         <item
             android:id="@+id/drawDiscussion"
             android:checked="false"
-            android:icon="@drawable/ic_discussion"
+            android:icon="@drawable/ic_group_white_24dp"
             android:title="@string/lblDiscussion" />
 
         <item
             android:id="@+id/drawRoutine"
             android:checked="false"
-            android:icon="@drawable/ic_routine"
+            android:icon="@drawable/ic_view_list_white_24dp"
             android:title="@string/lblRoutine" />
         <item
             android:id="@+id/drawSetting"
             android:checked="false"
-            android:icon="@drawable/ic_settings"
+            android:icon="@drawable/ic_settings_white_24dp"
             android:title="@string/lblSettings" />
         <item
             android:id="@+id/drawFeedback"
             android:checked="false"
-            android:icon="@drawable/ic_feedback"
+            android:icon="@drawable/ic_mail_white_24dp"
             android:title="@string/lblFeedBack" />
 
     </group>

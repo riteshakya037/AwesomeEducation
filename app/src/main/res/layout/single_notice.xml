@@ -31,7 +31,8 @@
             android:layout_alignParentTop="true"
             android:background="@null"
             android:contentDescription="@string/cardDownload"
-            android:src="@drawable/ic_notice" />
+            android:tint="@color/black_overlay"
+            android:src="@drawable/ic_today_white_24dp" />
 
         <TextView
             android:id="@+id/txtTitle"
