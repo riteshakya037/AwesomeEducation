@@ -47,6 +47,7 @@ public class DashFragment extends Fragment {
         adaptor = new DashListDisplay(getActivity());
         recyclerView.setAdapter(adaptor);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
+        setHasOptionsMenu(false);
         return v;
     }
 
