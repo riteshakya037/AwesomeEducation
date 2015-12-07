@@ -13,19 +13,17 @@ import com.parse.ParseException;
 import com.parse.ParseFile;
 import com.parse.ParseRole;
 import com.parse.ParseUser;
-import com.parse.SaveCallback;
 import com.parse.SignUpCallback;
 
 import org.json.JSONException;
 import org.json.JSONObject;
-
-import java.nio.ByteBuffer;
 
 /**
  * Created by ritesh on 10/24/15.
  */
 public class SaveUser {
 
+    byte[] array;
     private String userImageUrl;
     private String textName;
     private String textID;
@@ -33,7 +31,6 @@ public class SaveUser {
     private String mEmail;
     private AppCompatActivity context;
     private Dialog dlg;
-    byte[] array;
     private ParseFile profilePic;
 
     public void saveParseUser(String mEmail, final AppCompatActivity context, Dialog dlg) {
@@ -44,29 +41,29 @@ public class SaveUser {
         try {
             JSONObject profileData = new JSONObject(AbstractGetNameTask.GOOGLE_USER_DATA);
             System.out.println("profileData = " + profileData);
-            if (profileData.has("picture")) {
-                userImageUrl = profileData.getString("picture");
-                GetImageFromUrl getImageFromUrl = new GetImageFromUrl() {
-                    @Override
-                    protected void onPostExecute(Bitmap bitmap) {
-                        super.onPostExecute(bitmap);
-                        int bytes = bitmap.getByteCount();
-                        ByteBuffer buffer = ByteBuffer.allocate(bytes);
-                        bitmap.copyPixelsToBuffer(buffer);
-                        array = buffer.array();
-                        profilePic = new ParseFile("userpicture.png", array);
-                        profilePic.saveInBackground(new SaveCallback() {
-                            @Override
-                            public void done(ParseException e) {
-                                // If successful add file to user and signUpInBackground
-                                if (null == e)
-                                    addParseUser();
-                            }
-                        });
-                    }
-                };
-                getImageFromUrl.execute(userImageUrl);
-            }
+//            if (profileData.has("picture")) {
+//                userImageUrl = profileData.getString("picture");
+//                GetImageFromUrl getImageFromUrl = new GetImageFromUrl() {
+//                    @Override
+//                    protected void onPostExecute(Bitmap bitmap) {
+//                        super.onPostExecute(bitmap);
+//                        int bytes = bitmap.getByteCount();
+//                        ByteBuffer buffer = ByteBuffer.allocate(bytes);
+//                        bitmap.copyPixelsToBuffer(buffer);
+//                        array = buffer.array();
+//                        profilePic = new ParseFile("userpicture.png", array);
+//                        profilePic.saveInBackground(new SaveCallback() {
+//                            @Override
+//                            public void done(ParseException e) {
+//                                // If successful add file to user and signUpInBackground
+//                                if (null == e)
+//                                    addParseUser();
+//                            }
+//                        });
+//                    }
+//                };
+//                getImageFromUrl.execute(userImageUrl);
+//            }
             if (profileData.has("name")) {
                 textName = profileData.getString("name");
             }
@@ -76,6 +73,7 @@ public class SaveUser {
 //            if (profileData.has("gender")) {
 //                textGender = profileData.getString("gender");
 //            }
+            addParseUser();
 
         } catch (JSONException e) {
             e.printStackTrace();
@@ -90,7 +88,7 @@ public class SaveUser {
         user.setEmail(mEmail);
         user.setUsername(textID);
         user.setPassword(textID);
-        user.put("profilePic", profilePic);
+//        user.put("profilePic", profilePic);
 
         user.put("College", "");
         user.put("Faculty", "");
