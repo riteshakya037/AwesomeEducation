@@ -20,12 +20,12 @@ import com.awesome_folks.quidity.R;
 
 
 public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefreshListener, SearchView.OnQueryTextListener {
-    RecyclerView recyclerView;
-    private NotesListDisplay adaptor;
-    SwipeRefreshLayout swipeRefreshLayout;
-    private Handler handler = new Handler();
     private static final String BUNDLE_RECYCLER_LAYOUT = "classname.recycler.layout";
+    RecyclerView recyclerView;
+    SwipeRefreshLayout swipeRefreshLayout;
     LinearLayoutManager linearLayoutManager;
+    private NotesListDisplay adaptor;
+    private Handler handler = new Handler();
 
     /**
      * This is a method for Fragment.
@@ -112,7 +112,11 @@ public class NotesFragment extends Fragment implements SwipeRefreshLayout.OnRefr
 
     @Override
     public boolean onQueryTextChange(String query) {
+        adaptor.getData(query, false);
+        adaptor.notifyDataSetChanged();
+        recyclerView.scrollToPosition(0);
         return false;
+
     }
 
     @Override

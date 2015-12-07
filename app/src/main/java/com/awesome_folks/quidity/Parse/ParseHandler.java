@@ -21,15 +21,18 @@ public class ParseHandler {
     public static String clientKey = "QtlM8ngJMdIlNabKiIvqLsFmcTLETXoyS7MWhfoj";
 
 
-    public ArrayList<NoteRow> getNotes(final Context c, final RecyclerView.Adapter listDisplay, String filter, boolean isRefresh) {
+    public ArrayList<NoteRow> getNotes(final Context c, final RecyclerView.Adapter listDisplay, final String filter, boolean isRefresh) {
         final ArrayList<NoteRow> list = new ArrayList<>();
         ParseQuery<ParseObject> query = ParseQuery.getQuery("Notes");
         query.orderByDescending("createdAt");
         query.whereEqualTo("Subscription", "Kathmandu Engineering College_Computer_1");
-        final ProgressDialog dlg = new ProgressDialog(c);
+        final ProgressDialog dlg;
+        dlg = new ProgressDialog(c);
         dlg.setTitle("Please wait.");
         dlg.setMessage("Loading Data");
-        dlg.show();
+        if (filter == null) {
+            dlg.show();
+        }
         if (!isRefresh) {
             query.setCachePolicy(ParseQuery.CachePolicy.CACHE_THEN_NETWORK);
         } else {
@@ -41,8 +44,12 @@ public class ParseHandler {
                                        if (e == null) {
                                            list.clear();
                                            for (ParseObject post : parseObjects) {
-                                               NoteRow note = new NoteRow(post);
-                                               list.add(note);
+                                               if (filter == null || filter.equalsIgnoreCase("") ||
+                                                       post.getString(String.valueOf(NoteTable.Author.getFieldName())).toUpperCase().contains(filter.toUpperCase()) ||
+                                                       post.getString(String.valueOf(NoteTable.Title.getFieldName())).toUpperCase().contains(filter.toUpperCase())) {
+                                                   NoteRow note = new NoteRow(post);
+                                                   list.add(note);
+                                               }
                                            }
                                            listDisplay.notifyDataSetChanged();
                                            dlg.dismiss();
